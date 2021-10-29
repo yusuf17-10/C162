@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+        <script src="bullet.js"></script>
+    </head>
+    <body>
+
+        <a-scene id = "scene">
+            <a-entity id ="camera" position="0 4.5 120" camera wasd-controls look-controls = "pointerLockEnabled:false">
+                <a-cursor></a-cursor>
+            </a-entity>
+
+            <!-- Ground -->
+
+            <a-plane depth="0.5" height="200" width="200" color = "green" position="0 0 0" rotation="-90 0 0"></a-plane>
+
+            <a-box position="0 2 80" color = "orange" depth="1" height="5" width="5"></a-box>
+            <a-box position="-9 2 80" color = "blue" depth="1" height="5" width="5"></a-box>
+            <a-box position="9 2 80" color = "pink" depth="1" height="5" width="5"></a-box>
+            <a-box position="0 10 80" color = "red" depth="1" height="5" width="5"></a-box>
+
+            <a-entity id = "bullet" bullets></a-entity>
+
+        </a-scene>
+
+    </body>
+</html>
